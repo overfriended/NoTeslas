@@ -14,7 +14,7 @@ namespace NoTeslas
     name = "NoTeslas",
     description = "Negates any damage by teslas.",
     id = "overfriended.noteslas",
-    version = "1.1.0",
+    version = "1.1.0s",
     SmodMajor = 3,
     SmodMinor = 0,
     SmodRevision = 0
@@ -22,8 +22,9 @@ namespace NoTeslas
     public class NoTeslas : Plugin
     {
 
-        public static NoTeslas plugin = new NoTeslas();
+        public static NoTeslas Plugin { get; set; }
         private static IConfigFile Config => ConfigManager.Manager.Config;
+        public static bool isDisabled = false;
 
         public override void OnDisable()
         {
@@ -38,7 +39,7 @@ namespace NoTeslas
         public override void Register()
         {
             this.AddEventHandlers(new EventHandler(this));
-            this.AddCommand("togglent", new CommandToggle(this));
+            this.AddCommand("togglent", new CommandToggle());
         }
     }
 }

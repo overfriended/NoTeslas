@@ -28,7 +28,7 @@ namespace NoTeslas
         }
         public void OnPlayerTriggerTesla(PlayerTriggerTeslaEvent ev)
         {
-            ev.Triggerable = false;
+            ev.Triggerable = NoTeslas.isDisabled;
         }
     }
 }
