@@ -13,7 +13,7 @@ namespace NoTeslas
 
         public string GetCommandDescription()
         {
-            return "Enable/Disable teslas.";
+            return "Toggle teslas.";
         }
 
         public string GetUsage()
